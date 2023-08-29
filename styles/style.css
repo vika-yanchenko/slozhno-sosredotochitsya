@@ -1,5 +1,4 @@
 .page {
-  padding: var(--gap-outside);
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-family-main);
@@ -8,13 +7,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding: var(--gap-outside);
 }
 
 .main__title {
   color: var(--additional-color);
   text-shadow: 4px 4px 0px var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  padding-block-end: 3rem;
   line-height: 0.825;
   font-weight: 700;
   align-self: center;
@@ -125,7 +124,7 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  top: calc(100vh - 60px);
+  bottom: 5vh;
   left: 0;
   width: 1.563rem;
   height: 1.563rem;
@@ -261,6 +260,10 @@
   justify-content: center;
 }
 
+.footer__title {
+  margin-block-start: -3rem;
+}
+
 @media (768px <= width < 1024px) {
   .header {
     grid-template-areas: 
@@ -269,9 +272,13 @@
     '... title-decor';
   }
 
+  .header__title {
+    margin-block-start: -2rem;
+  }
+
   .header .header__theme-menu {
     justify-self: end;
-    align-self: end;
+    align-self: center;
   }
 
   .header__theme-menu-list {
@@ -315,7 +322,7 @@
 
   .header .header__theme-menu {
     justify-self: end;
-    align-self: end;
+    align-self: center;
   }
 
   .header__theme-menu-list {
