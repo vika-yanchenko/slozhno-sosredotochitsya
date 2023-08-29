@@ -1,5 +1,246 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  padding: var(--gap-outside);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family-main);
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.main__title {
+  color: var(--additional-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 0.825;  
+  font-weight: 700;
+}
+
+.header__title {
+  margin-inline-start: -20px;
+}
+
+.accent-title {
+  color: var(--background-color);
+  font-size: var(--font-size-main);
+  font-weight: 700;
+  line-height: 1.3;
+  background-color: var(--accent-color);
+  display: inline-block;
+  width: 100%;
+}
+
+.accent-title_reg {
+  font-weight: 400;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  margin-block-end: 3.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  'nav nav'
+  'title title'
+  '... accent-title';
+}
+
+.decorated-zone::after {
+  content: 'REC';
+  position: absolute;
+  color: var(--accent-color);
+  top: 0.2rem;
+  right: 1.7rem;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  top: 0.6rem;
+  right: 0.6rem;
+  filter: drop-shadow(0px 0px 5px #FF0070);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: var(--gap-inside);
+}
+
+.header .main__title {
+  grid-area: title;
+}
+
+.header .header__theme-menu {
+  grid-area: nav;
+  justify-self: center;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 1px 13px 4px;
+  color: var(--accent-color);
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header .accent-title__wrapper {
+  grid-area: accent-title;
+}
+
+.decor {
+  position: absolute;
+  height: calc(100vh - 40px);
+  width: 100%;
+  pointer-events: none;
+}
+
+.decor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.563rem;
+  height: 1.563rem;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+
+.decor::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.563rem;
+  height: 1.563rem;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-outside);
+  margin-block-end: 5rem;
+}
+
+.section__article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-inside);
+}
+
+.section__title {
+  color: var(--accent-color);
+  font-size: var(--font-size-main);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.section .section__title {
+  grid-area: title;
+}
+
+.section .accent-title {
+  grid-area: accent-title;
+}
+
+.section .section__article:nth-of-type(1) {
+  grid-area: first;
+}
+
+.section .section__article:nth-of-type(2) {
+  grid-area: second;
+}
+
+.section .section__article:nth-of-type(3) {
+  grid-area: third;
+}
+
+.section .section__article:nth-of-type(4) {
+  grid-area: fourth;
+}
+
+.section .section__article:nth-of-type(5) {
+  grid-area: fifth;
+}
+
+.causes {
+  grid-template-areas: 
+  'title first first'
+  'title second second';
+}
+
+.reasons {
+  grid-template-areas: 
+  'title title title'
+  'first second third';
+}
+
+.lifehacks {
+  grid-template-areas: 
+  'title accent-title accent-title'
+  'title first first'
+  'title second second'
+  'title third third'
+  'title fourth fourth'
+  'title fifth fifth';
+}
+
+.visual {
+  width: 100%;
+  grid-template-areas: 
+  'accent-title accent-title accent-title'
+  'first first fifth'
+  'second third fifth'
+  'second fourth fourth';
+}
+
+.visual__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.visual .visual__image:nth-of-type(1) {
+  grid-area: first;
+}
+
+.visual .visual__image:nth-of-type(2) {
+  grid-area: second;
+}
+
+.visual .visual__image:nth-of-type(3) {
+  grid-area: third;
+}
+
+.visual .visual__image:nth-of-type(4) {
+  grid-area: fourth;
+}
+
+.visual .visual__image:nth-of-type(5) {
+  grid-area: fifth;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
