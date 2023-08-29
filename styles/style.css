@@ -151,6 +151,10 @@
   line-height: 1.3;
 }
 
+.section__text {
+  line-height: 1.3;
+}
+
 .text-shadow {
   color: var(--text-color);
   text-decoration: none;
@@ -338,9 +342,9 @@
     grid-template-areas: 
     'title-decor'
     'first'
+    'fifth'
     'second'
     'third'
-    'fourth'
-    'fifth';
+    'fourth';
   }
 }
