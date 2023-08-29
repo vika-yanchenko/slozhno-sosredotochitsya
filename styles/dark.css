@@ -36,4 +36,24 @@
   color: var(--accent-color);
 }
 
+.page:is(.theme_dark) .title-decor {
+  color: var(--background-color);
+}
 
+.page:is(.theme_dark) .section__title {
+  color: var(--accent-color);
+}
+
+.page:is(.theme_dark) .decorated-zone::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.page:is(.theme_dark) .decorated-zone::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}

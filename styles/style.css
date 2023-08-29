@@ -38,7 +38,7 @@
 
 .header {
   position: relative;
-  height: calc(100vh - 2rem);
+  height: 100vh;
   margin-block-end: 3.75rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -109,7 +109,6 @@
   grid-area: title-decor;
 }
 
-
 .decorated-zone::before {
   content: '';
   position: absolute;
@@ -121,11 +120,10 @@
   border-right: 1px solid var(--accent-color);
 }
 
-
 .decorated-zone::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: calc(100vh - 60px);
   left: 0;
   width: 1.563rem;
   height: 1.563rem;
@@ -251,9 +249,10 @@
 .footer {
   position: relative;
   display: flex;
-  height: calc(100vh - 2rem);
+  height: 100vh;
   align-items: center;
   justify-content: center;
+  margin-block-end: -10rem;
 }
 
 @media (768px <= width < 1024px) {
