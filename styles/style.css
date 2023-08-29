@@ -272,7 +272,7 @@
 
   .header .header__theme-menu {
     justify-self: end;
-    align-self: center;
+    align-self: end;
   }
 
   .header__theme-menu-list {
@@ -286,10 +286,14 @@
     'second second second'
     'third third third';
   }
+
+  .lifehacks {
+    grid-template-columns: 1.05fr 1fr 1fr;
+  }
   
 }
 
-@media (375px <= width < 768px) {
+@media (width < 768px) {
   .header {
     height: calc(100vh - 2rem);
     display: grid;
@@ -302,7 +306,7 @@
 
   .header .header__theme-menu {
     justify-self: end;
-    align-self: center;
+    align-self: end;
   }
 
   .header__theme-menu-list {
