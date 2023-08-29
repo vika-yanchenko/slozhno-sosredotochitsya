@@ -3,7 +3,7 @@
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-family-main);
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-img);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
   margin-inline-start: -20px;
 }
 
-.accent-title {
+.title-decor {
   color: var(--background-color);
   font-size: var(--font-size-main);
   font-weight: 700;
@@ -32,23 +32,31 @@
   width: 100%;
 }
 
-.accent-title_reg {
+.title-decor_reg {
   font-weight: 400;
 }
 
 .header {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 2rem);
   margin-block-end: 3.75rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 
   'nav nav'
   'title title'
-  '... accent-title';
+  '... title-decor';
 }
 
-.decorated-zone::after {
+
+.decor {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.decor::after {
   content: 'REC';
   position: absolute;
   color: var(--accent-color);
@@ -56,7 +64,7 @@
   right: 1.7rem;
 }
 
-.decorated-zone::before {
+.decor::before {
   content: '';
   position: absolute;
   width: 9px;
@@ -93,22 +101,16 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid currentColor;
   pointer-events: none;
 }
 
-.header .accent-title__wrapper {
-  grid-area: accent-title;
+.header .title-decor__wrapper {
+  grid-area: title-decor;
 }
 
-.decor {
-  position: absolute;
-  height: calc(100vh - 40px);
-  width: 100%;
-  pointer-events: none;
-}
 
-.decor::before {
+.decorated-zone::before {
   content: '';
   position: absolute;
   top: 0;
@@ -120,7 +122,7 @@
 }
 
 
-.decor::after {
+.decorated-zone::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -151,12 +153,21 @@
   line-height: 1.3;
 }
 
+.text-shadow {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--font-size-main);
+  text-shadow: 2px 2px 0px var(--accent-color);
+  font-weight: 400;
+  line-height: 1.3; /* 130% */
+}
+
 .section .section__title {
   grid-area: title;
 }
 
-.section .accent-title {
-  grid-area: accent-title;
+.section .title-decor {
+  grid-area: title-decor;
 }
 
 .section .section__article:nth-of-type(1) {
@@ -193,7 +204,7 @@
 
 .lifehacks {
   grid-template-areas: 
-  'title accent-title accent-title'
+  'title title-decor title-decor'
   'title first first'
   'title second second'
   'title third third'
@@ -204,7 +215,7 @@
 .visual {
   width: 100%;
   grid-template-areas: 
-  'accent-title accent-title accent-title'
+  'title-decor title-decor title-decor'
   'first first fifth'
   'second third fifth'
   'second fourth fourth';
@@ -240,7 +251,97 @@
 .footer {
   position: relative;
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 2rem);
   align-items: center;
   justify-content: center;
+}
+
+@media (768px <= width < 1024px) {
+  .header {    
+    grid-template-areas: 
+    '... nav'
+    'title title'
+    '... title-decor';
+  }
+
+  .header .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .reasons {
+    grid-template-areas: 
+    'title title title'
+    'first first first'
+    'second second second'
+    'third third third';
+  }
+  
+}
+
+@media (375px <= width < 768px) {
+  .header {
+    height: calc(100vh - 2rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'nav'
+    'title'
+    'title-decor';
+  }
+
+  .header .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-block-end: 3.125rem
+  }
+
+  .causes {
+    grid-template-areas: 
+    'title'
+    'first'
+    'second';
+  }
+
+  .reasons {
+    grid-template-areas: 
+    'title'
+    'first'
+    'second'
+    'third';
+  }
+
+  .lifehacks {
+    grid-template-areas: 
+    'title'
+    'title-decor'
+    'first'
+    'second'
+    'third'
+    'fourth'
+    'fifth';
+  }
+
+  .visual {
+    grid-template-areas: 
+    'title-decor'
+    'first'
+    'second'
+    'third'
+    'fourth'
+    'fifth';
+  }
 }

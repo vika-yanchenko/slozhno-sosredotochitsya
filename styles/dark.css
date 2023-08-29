@@ -8,5 +8,32 @@
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
-  */
+  */  
+  --background-color: #000028;
+  --text-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --additional-color: #DB00FF;
+  --font-size-main: 1.125rem;
+  --font-family-main: 'IBM Plex Mono', sans-serif;
+  --gap-outside: 1.25rem;
+  --gap-inside: 0.625rem;
+  --bg-img: url(../images/cover-image-dark.png);
 }
+
+.page:is(.theme_dark) .decor {
+  display: block;
+}
+
+.page:is(.theme_dark) .main__title {
+  color: var(--additional-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 0.825;  
+  font-weight: 700;
+}
+
+.page:is(.theme_dark) .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+

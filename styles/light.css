@@ -9,4 +9,52 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --background-color: #FFF1F7;
+  --text-color: #353430;
+  --accent-color: #FF8DCB;
+  --additional-color: #FF0070;
+  --title-main: #FFC2E6;
+  --font-size-main: 1.125rem;
+  --font-family-main: 'IBM Plex Mono', sans-serif;
+  --gap-outside: 1.25rem;
+  --gap-inside: 0.625rem;
+  --bg-img: url(../images/cover-image-light.png);
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #FFF1F7;
+    --text-color: #353430;
+    --accent-color: #FF8DCB;
+    --additional-color: #FF0070;
+    --title-color: #FFC2E6;
+    --font-size-main: 1.125rem;
+    --font-family-main: 'IBM Plex Mono', sans-serif;
+    --gap-outside: 1.25rem;
+    --gap-inside: 0.625rem; 
+    --bg-img: url(../images/cover-image-light.png)
+    }
+
+    .decor {
+      display: none;
+    }
+
+    .main__title {
+      color: var(--title-color);
+      text-shadow: 4px 4px 0px var(--additional-color);
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+      line-height: 0.825;  
+      font-weight: 700;
+    }
+
+    .header__theme-menu-button {
+      color: var(--text-color);
+    }
+
+}
+
+
+
+
+
+
