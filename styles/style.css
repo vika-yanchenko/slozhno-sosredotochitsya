@@ -125,7 +125,7 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: calc(100vh - 60px);
   left: 0;
   width: 1.563rem;
   height: 1.563rem;
