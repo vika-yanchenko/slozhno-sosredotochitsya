@@ -31,7 +31,7 @@
     --font-size-main: 1.125rem;
     --font-family-main: 'IBM Plex Mono', sans-serif;
     --gap-outside: 1.25rem;
-    --gap-inside: 0.625rem; 
+    --gap-inside: 0.625rem;
     --bg-img: url(../images/cover-image-light.png);
   }
 
@@ -43,7 +43,7 @@
       color: var(--title-color);
       text-shadow: 4px 4px 0px var(--additional-color);
       font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-      line-height: 0.825;  
+      line-height: 0.825;
       font-weight: 700;
     }
 

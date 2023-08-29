@@ -24,7 +24,7 @@
   color: var(--additional-color);
   text-shadow: 4px 4px 0px var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  line-height: 0.825;  
+  line-height: 0.825;
   font-weight: 700;
 }
 

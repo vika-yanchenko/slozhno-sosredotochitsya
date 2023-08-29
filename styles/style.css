@@ -15,7 +15,7 @@
   text-shadow: 4px 4px 0px var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   padding-block-end: 3rem;
-  line-height: 0.825;  
+  line-height: 0.825;
   font-weight: 700;
   align-self: center;
 }
@@ -263,7 +263,7 @@
 }
 
 @media (768px <= width < 1024px) {
-  .header {    
+  .header {
     grid-template-areas: 
     '... nav'
     'title title'
