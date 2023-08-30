@@ -4,10 +4,6 @@
   --accent-color: #FF8DCB;
   --additional-color: #FF0070;
   --title-main: #FFC2E6;
-  --font-size-main: 1.125rem;
-  --font-family-main: 'IBM Plex Mono', sans-serif;
-  --gap-outside: 1.25rem;
-  --gap-inside: 0.625rem;
   --bg-img: url(../images/cover-image-light.png);
 }
 
@@ -64,10 +60,6 @@
     --accent-color: #FF8DCB;
     --additional-color: #FF0070;
     --title-color: #FFC2E6;
-    --font-size-main: 1.125rem;
-    --font-family-main: 'IBM Plex Mono', sans-serif;
-    --gap-outside: 1.25rem;
-    --gap-inside: 0.625rem;
     --bg-img: url(../images/cover-image-light.png);
   }
 }

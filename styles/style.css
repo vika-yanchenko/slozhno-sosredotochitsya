@@ -20,11 +20,6 @@
   align-self: center;
 }
 
-.header__title {
-  margin-inline-start: -20px;
-  margin-block-start: -3rem;
-}
-
 .title-decor {
   color: var(--background-color);
   font-size: var(--font-size-main);
@@ -41,6 +36,7 @@
 
 .header {
   position: relative;
+  min-height: 668px;
   height: 100vh;
   margin-block-end: 2.5rem;
   display: grid;
@@ -55,14 +51,16 @@
 
 .decor {
   position: absolute;
+  inset: 0;
   height: 100%;
   width: 100%;
   pointer-events: none;
 }
 
 .decor::after {
-  content: 'REC';
+  content: 'rec';
   position: absolute;
+  text-transform: uppercase;
   color: var(--accent-color);
   top: 0.2rem;
   right: 1.7rem;
@@ -73,11 +71,11 @@
   position: absolute;
   width: 9px;
   height: 9px;
-  border-radius: 10px;
+  border-radius: 50%;
   background-color: var(--accent-color);
   top: 0.6rem;
   right: 0.6rem;
-  filter: drop-shadow(0px 0px 5px #FF0070);
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
 .header__theme-menu-list {
@@ -98,9 +96,11 @@
   background-color: transparent;
   border: 1px solid transparent;
   padding: 1px 13px 4px;
+  line-height: 1;
+  text-transform: lowercase;
   color: var(--accent-color);
   text-align: center;
-  font-size: 18px;
+  font-size: var(--font-size-main);
   cursor: pointer;
 }
 
@@ -132,7 +132,7 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  bottom: 5vh;
+  bottom: 0;
   left: 0;
   width: 1.563rem;
   height: 1.563rem;
@@ -274,14 +274,11 @@
 
 .footer {
   position: relative;
+  min-height: 668px;
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
-}
-
-.footer__title {
-  margin-block-start: -2rem;
 }
 
 @media (768px <= width < 1024px) {
@@ -330,19 +327,12 @@
   }
 
   .header {
-    height: 100vh;
-    display: grid;
     grid-template-columns: 1fr;
     margin-block-end: 1.9rem;
     grid-template-areas: 
     'nav'
     'title'
     'title-decor';
-  }
-
-  .header__title {
-    margin-inline-start: -5px;
-    margin-block-start: -1.5rem;
   }
 
   .header .header__theme-menu {
@@ -353,13 +343,6 @@
   .header__theme-menu-list {
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .decorated-zone::after {
-    content: '';
-    position: absolute;
-    top: calc(100vh - 45px);
-    left: 0;
   }
 
   .section {
