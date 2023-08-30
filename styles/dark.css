@@ -4,56 +4,84 @@
   переключая тему
 */
 
-.page.theme_dark {
-  --background-color: #00183F;
-  --text-color: #F1B2CE;
-  --accent-color: #FF0070;
-  --additional-color: #DB00FF;
-  --bg-img: url(../images/cover-image-dark.png);
+.page.theme_dark .title-decor {
+  color: var(--background-color);
+  background-color: var(--accent-color);
 }
 
-.page:is(.theme_dark) .decor {
+.page.theme_dark .decor {
   display: block;
 }
 
-.page:is(.theme_dark) .main__title {
-  color: var(--additional-color);
-  text-shadow: 4px 4px 0px var(--accent-color);
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  line-height: 0.825;
+.page.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+.page.theme_dark .section__title {
+  color: var(--accent-color);
   font-weight: 700;
+  line-height: 1.3;
 }
 
-.page:is(.theme_dark) .header__theme-menu-button {
-  color: var(--accent-color);
-}
-
-.page:is(.theme_dark) .title-decor {
-  color: var(--background-color);
-}
-
-.page:is(.theme_dark) .section__title {
-  color: var(--accent-color);
-}
-
-.page:is(.theme_dark) .decorated-zone::before {
-  content: '';
-  position: absolute;
+.page.theme_dark .decorated-zone::before {
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
 }
 
-.page:is(.theme_dark) .decorated-zone::after {
-  content: '';
-  position: absolute;
+.page.theme_dark .decorated-zone::after {
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
 }
 
-.page:is(.theme_dark) .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.40);
+.page.theme_dark {
+  --background-color: #00183F;
+  --text-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --font-size-main: 1.125rem;
+  --font-family-main: 'IBM Plex Mono', monospace;
+  --gap-outside: 1.25rem;
+  --gap-inside: 0.625rem;
+  --bg-img: url(../images/cover-image-dark.png);
 }
 
-.page:is(.theme_dark) .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #00183F;
+    --text-color: #F1B2CE;
+    --accent-color: #FF0070;
+    --title-color: #DB00FF;
+    --font-size-main: 1.125rem;
+    --font-family-main: 'IBM Plex Mono', monospace;
+    --gap-outside: 1.25rem;
+    --gap-inside: 0.625rem;
+    --bg-img: url(../images/cover-image-dark.png);  
+    }
+
+    .title-decor {
+      color: var(--background-color);
+      background-color: var(--accent-color);
+    }
+
+    .decor {
+      display: block;
+    }
+
+    .section__title {
+      color: var(--accent-color);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .header__theme-menu-button {
+      color: var(--accent-color);
+    }
+
+    .header__theme-menu-button:hover {
+      outline: 1px solid rgba(255, 0, 112, 0.40);
+    }
 }
