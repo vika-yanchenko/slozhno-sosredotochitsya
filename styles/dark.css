@@ -53,3 +53,11 @@
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
 }
+
+.page:is(.theme_dark) .header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+.page:is(.theme_dark) .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
