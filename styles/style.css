@@ -53,6 +53,7 @@
 
 .header__title {
   grid-column: 1 / -1;
+  padding-block-end: 2rem;
 }
 
 .title-decor__wrapper {
@@ -282,11 +283,12 @@
   }
 
   .reasons .section__title {
-    grid-column: 1 / 2;
+    grid-column: 1 / -1;
+    max-width: 236px;
   }
 
   .reasons .section__article {
-    grid-column: 2 / -1;    
+    grid-column: 1 / -1;    
   }
 
   .lifehacks {
@@ -295,8 +297,13 @@
 }
 
 @media (width < 768px) {  
+  .page {
+    padding: var(--gap-inside);
+  }
+
   .header {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;    
+    margin-block-end: 2rem;
   }
 
   .header__theme-menu {
@@ -313,8 +320,13 @@
     grid-column: 1 / -1;
   }
 
+  .main__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
   .section {
     grid-template-columns: 1fr;
+    margin-block-end: 2.95rem;
   }
 
   .causes .section__title {
