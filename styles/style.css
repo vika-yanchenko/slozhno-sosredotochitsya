@@ -47,7 +47,7 @@
 
 .header,
 .section,
-.footer {  
+.footer {
   padding-left: var(--gap-outside);
   padding-right: var(--gap-outside);
 }
@@ -329,7 +329,7 @@
   .header .title-decor__wrapper {
     grid-column: 1 / -1;
   }
-
+  
   .header__title {    
     margin-inline-start: 0;
     margin-block-start: 0.6rem;
@@ -359,13 +359,13 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .section {    
+  .section {
     padding-left: var(--gap-inside);
     padding-right: var(--gap-inside);
     grid-template-columns: 1fr;
     margin-block-end: 3.1rem;
   }
-
+  
   .section:last-child {
     margin-block-end: 2.7rem;
   }
