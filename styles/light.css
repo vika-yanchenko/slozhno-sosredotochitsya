@@ -18,7 +18,7 @@
 }
 
 .page.theme_light .header__theme-menu-button:hover {
-  outline: 1px solid rgba(50, 49, 45, 0.40);
+  outline: 1px solid var(--hover-outline);
 }
 
 .page.theme_light .section__title {
@@ -48,6 +48,7 @@
   --accent-color: #FF0070;
   --title-color: #FFC2E6;
   --additional-color: #FF8DCB;
+  --hover-outline: rgba(50, 49, 45, 0.40);
   --bg-img: url(../images/cover-image-light.png);
 }
 
@@ -58,6 +59,7 @@
     --accent-color: #FF0070;
     --title-color: #FFC2E6;
     --additional-color: #FF8DCB;
+    --hover-outline: rgba(50, 49, 45, 0.40);
     --bg-img: url(../images/cover-image-light.png);
     }
 
@@ -96,6 +98,6 @@
     }
 
     .header__theme-menu-button:hover {
-      outline: 1px solid rgba(50, 49, 45, 0.40);
+      outline: 1px solid var(--hover-outline);
     }
 }

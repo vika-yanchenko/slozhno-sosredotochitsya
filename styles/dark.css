@@ -18,7 +18,7 @@
 }
 
 .page.theme_dark .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.40);
+  outline: 1px solid var(--hover-outline);
 }
 
 .page.theme_dark .section__title {
@@ -47,6 +47,7 @@
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
   --title-color: #DB00FF;
+  --hover-outline: rgba(255, 0, 112, 0.40);
   --bg-img: url(../images/cover-image-dark.png);
 }
 
@@ -56,6 +57,7 @@
     --text-color: #F1B2CE;
     --accent-color: #FF0070;
     --title-color: #DB00FF;
+    --hover-outline: rgba(255, 0, 112, 0.40);
     --bg-img: url(../images/cover-image-dark.png);
     }
 
@@ -84,6 +86,6 @@
     }
 
     .header__theme-menu-button:hover {
-      outline: 1px solid rgba(255, 0, 112, 0.40);
+      outline: 1px solid var(--hover-outline);
     }
 }

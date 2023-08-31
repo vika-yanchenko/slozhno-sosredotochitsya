@@ -5,6 +5,7 @@
   --title-color: #DB00FF;
   --font-size-main: 1.125rem;
   --font-family-main: 'IBM Plex Mono', monospace;
+  --hover-outline: rgba(255, 0, 112, 0.40);
   --gap-outside: 1.25rem;
   --gap-inside: 0.625rem;
   --bg-img: url(../images/cover-image-dark.png);
