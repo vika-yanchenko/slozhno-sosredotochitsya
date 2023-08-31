@@ -265,7 +265,7 @@
 }
 
 .footer {
-  position: relative;  
+  position: relative;
   padding-bottom: var(--gap-outside);
   min-height: 668px;
   display: flex;
@@ -330,7 +330,7 @@
     grid-column: 1 / -1;
   }
   
-  .header__title {    
+  .header__title {
     margin-inline-start: 0;
     margin-block-start: 0.6rem;
   }
