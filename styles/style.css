@@ -47,7 +47,7 @@
 }
 
 .header__theme-menu {
-  grid-column: 1 / -1;  
+  grid-column: 1 / -1;
   justify-self: center;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .title-decor__wrapper {
-  grid-column: 2 / -1;  
+  grid-column: 2 / -1;
   margin-block-start: 2rem;
 }
 
@@ -288,7 +288,7 @@
   }
 
   .reasons .section__article {
-    grid-column: 1 / -1;    
+    grid-column: 1 / -1;
   }
 
   .lifehacks {
@@ -296,13 +296,13 @@
   }
 }
 
-@media (width < 768px) {  
+@media (width < 768px) {
   .page {
     padding: var(--gap-inside);
   }
 
   .header {
-    grid-template-columns: 1fr;    
+    grid-template-columns: 1fr;
     margin-block-end: 2rem;
   }
 
