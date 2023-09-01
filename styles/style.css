@@ -58,8 +58,9 @@
 }
 
 .header__title {
+  position: relative;
+  inset-inline-end: 1rem;
   grid-column: 1 / -1;
-  margin-inline-start: -1rem;
   padding-block-end: 1rem;
 }
 
@@ -330,8 +331,8 @@
     grid-column: 1 / -1;
   }
   
-  .header__title {
-    margin-inline-start: 0;
+  .header__title {    
+    inset-inline-end: 0.5rem;
     margin-block-start: 0.6rem;
   }
 
