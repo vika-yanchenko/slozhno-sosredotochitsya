@@ -157,7 +157,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap-outside);
-  margin-block-end: 4.95rem;
+  margin-block-end: 5rem;
 }
 
 .section:last-child {
@@ -295,7 +295,7 @@
   }
 
   .causes {
-    grid-template-columns: 1.04fr 1fr 1fr;
+    grid-template-columns: 1.055fr 1fr 1fr;
   }
 
   .reasons .section__title {
@@ -308,7 +308,7 @@
   }
 
   .lifehacks {
-    grid-template-columns: 1.05fr 1fr 1fr;
+    grid-template-columns: 1.055fr 1fr 1fr;
   }
 }
 
