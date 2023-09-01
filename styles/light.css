@@ -9,6 +9,10 @@
   background-color: var(--additional-color);
 }
 
+.page.theme_light .main__title {
+  text-shadow: 4px 4px 0px var(--additional-color);
+}
+
 .page.theme_light .decor {
   display: none;
 }
@@ -66,6 +70,10 @@
     .title-decor {
       color: var(--text-color);
       background-color: var(--additional-color);
+    }
+
+    .main__title {
+      text-shadow: 4px 4px 0px var(--additional-color);
     }
 
     .decor {

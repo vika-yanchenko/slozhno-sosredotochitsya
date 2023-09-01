@@ -9,6 +9,10 @@
   background-color: var(--accent-color);
 }
 
+.page.theme_dark .main__title {
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
 .page.theme_dark .decor {
   display: block;
 }
@@ -64,6 +68,10 @@
     .title-decor {
       color: var(--background-color);
       background-color: var(--accent-color);
+    }
+
+    .main__title {
+      text-shadow: 4px 4px 0px var(--accent-color);
     }
 
     .decor {

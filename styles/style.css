@@ -404,6 +404,6 @@
   }
 
   .footer {
-    padding: var(--gap-inside);
+    padding-bottom: var(--gap-inside);
   }
 }
