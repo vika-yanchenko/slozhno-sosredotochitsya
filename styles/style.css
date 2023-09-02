@@ -12,7 +12,7 @@
 .main__title {
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--accent-color);
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-size: var(--title-size-l);
   line-height: 0.825;
   font-weight: 700;
   align-self: center;
@@ -34,7 +34,7 @@
 
 .header {
   position: relative;
-  padding-top: var(--gap-outside);
+  padding-block-start: var(--gap-outside);
   min-height: 668px;
   height: 100vh;
   margin-block-end: 3.7rem;
@@ -60,12 +60,13 @@
 .header__title {
   grid-column: 1 / -1;
   padding-block-end: 1rem;
-  margin-inline-start: -1.2rem;
+  position: relative;
+  inset-inline-start: calc(-1 * var(--gap-outside));
 }
 
 .title-decor__wrapper {
   grid-column: 2 / -1;
-  margin-block-start: 2.8rem;
+  padding-block-start: 2.8rem;
 }
 
 .decor {
@@ -282,7 +283,7 @@
   .header .header__theme-menu {
     justify-self: end;
     align-self: center;
-    margin-block-start: 6.5rem;
+    padding-block-start: 6.5rem;
   }
 
   .header__theme-menu-list {
@@ -291,11 +292,11 @@
   }
 
   .header .title-decor__wrapper {
-    margin-block-start: 2.2rem;
+    padding-block-start: 2.2rem;
   }
 
   .causes {
-    grid-template-columns: 1.055fr 1fr 1fr;
+    grid-template-columns: 1.05fr 1fr 1fr;
   }
 
   .reasons .section__title {
@@ -308,7 +309,7 @@
   }
 
   .lifehacks {
-    grid-template-columns: 1.055fr 1fr 1fr;
+    grid-template-columns: 1.05fr 1fr 1fr;
   }
 }
 
@@ -328,16 +329,18 @@
 
   .header__theme-menu-list {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.75rem;
   }
 
   .header .title-decor__wrapper {
     grid-column: 1 / -1;
+    padding-block-start: 2.6rem;
   }
   
-  .header__title {
-    margin-inline-start: 0rem;
-    margin-block-start: 0.7rem;
+  .header__title {    
+    position: relative;
+    inset-inline-start: 0;
+    padding-block-start: 0.75rem;
   }
 
   .decorated-zone::before {
@@ -361,7 +364,7 @@
   }
 
   .main__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    font-size: var(--title-size-s);
   }
 
   .section {

@@ -3,6 +3,8 @@
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
   --title-color: #DB00FF;
+  --title-size-l: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --title-size-s: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-size-main: 1.125rem;
   --font-family-main: 'IBM Plex Mono', monospace;
   --hover-outline: rgba(255, 0, 112, 0.40);
